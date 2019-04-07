@@ -1,0 +1,66 @@
+@import "sass/_mixins/all"
+@import "sass/libs"
+@import "sass/vars"
+@import "sass/colors"
+
+/*==========  fonts  ==========*/
+
++font-face("Montserrat", "fonts/MontserratLight", 300)
++font-face("Montserrat", "fonts/MontserratRegular")
++font-face("Montserrat", "fonts/MontserratBold", 700)
+
+
++font-face("DINProRegular", "fonts/DINPro")
+
++font-face("GothamPro", "fonts/GothamPro")
++font-face("cir", "fonts/cir")
+
++font-face("Geometria", "fonts/Geometria")
+
++font-face("sf", "fonts/sf")
+
+/*==========  deffault style  ==========*/
+
+::-webkit-scrollbar
+	width: 12px
+html
+	&:not([class="load"])
+		section
+			background-image: none!important
+	.main-container
+		opacity: 0
+	
+	&.load
+		.main-container
+			opacity: 1
+
+body
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+	border: 0
+	font-family: $y-font
+			
+img
+	display: none
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤0px
++media-breakpoint-up(xs)
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
+
