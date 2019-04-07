@@ -62,6 +62,11 @@ gulp.task('fonts', function() {
 	.pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('imagen', function() {
+	return gulp.src('app/img/**/*')
+	.pipe(gulp.dest('dist/img'));
+});
+
 
 gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
@@ -77,8 +82,12 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/lazysizes.min.js',
 		'app/libs/bootstrap/popper.min.js',
 		'app/libs/bootstrap/bootstrap.min.js',
+		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
+		'app/libs/intlTelInput/intlTelInput.js',
+		'app/js/sender.js',
 		'app/js/common.js',
 		])
 	.pipe(concat('scripts.min.js'))
@@ -102,6 +111,16 @@ gulp.task('buildhtmlwatch', function() {
 	    .pipe(gulp.dest('dist'));
 });
 
+gulp.task('webpImages', function () {
+	(async () => {
+		const webp = await imagemin(['app/img/*.{jpg,png}'], 'app/img', {
+			use: [
+				imageminWebp({quality: 70})
+			]
+		});
+	})();
+});
+
 gulp.task('watch', function() {
 	gulp.watch('app/header.sass', gulp.parallel('headersass'));
 	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
@@ -115,5 +134,5 @@ gulp.task('watch', function() {
 
 gulp.task('clearcache', function () { return cache.clearAll(); });
 
-gulp.task('default', gulp.parallel('clearcache', 'fonts', 'styles', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('clearcache', 'webpImages', 'imagen', 'fonts', 'styles', 'scripts', 'browser-sync', 'watch'));
 

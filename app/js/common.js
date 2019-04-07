@@ -11,6 +11,16 @@ $(document).ready(function() {
 		var h = w/1.5 - 30;
 		$(this).closest('.video-wrap').css('height', h);
 	});
+
+	$('.popup-terms').magnificPopup({
+		type: 'inline',
+		fixedContentPos: true,
+		fixedBgPos: true,
+		overflowY: 'auto',
+		closeBtnInside: true,
+		midClick: true,
+		mainClass: 'mfp-zoom',
+	});
 });
 
 $(document).on('click', '.popup-modal-dismiss', function (e) {
