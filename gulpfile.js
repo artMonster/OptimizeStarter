@@ -87,7 +87,7 @@ gulp.task('scripts', function() {
 		'app/libs/bootstrap/bootstrap.min.js',
 		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		'app/libs/intlTelInput/intlTelInput.js',
-		'app/js/sender.js',
+		'app/libs/YTPlayer/jquery.mb.YTPlayer.min.js',
 		'app/js/common.js',
 		])
 	.pipe(concat('scripts.min.js'))

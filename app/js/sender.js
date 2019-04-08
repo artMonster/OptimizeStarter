@@ -90,7 +90,7 @@ function validationsForm(form) {
   });
 
   if (errorMessage.length > 0) {
-    errorTags.html('<div class="alert alert-warning alert-dismissible" role="alert"><span class="alert-heading">' +'Ошибка заполнения</span><br><small><b>' + errorMessage + '</b></small><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');    
+    errorTags.html('<div class="alert alert-danger alert-dismissible" role="alert"><span class="alert-heading">' +'Ошибка заполнения</span><br><small><b>' + errorMessage + '</b></small><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');    
   } else {
     null;
   } 
@@ -130,7 +130,7 @@ function submitForm() {
 
     $.ajax({
       type: 'POST',
-      url: 'handler/handler.php',
+      url: 'https://shurina.ru/tr2019/lp/handler/handler.php',
       //dataType: 'json',
       data: fieldsData,
       statusCode: {
