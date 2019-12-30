@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+@@include('header.html')
+
+<!--<Deject>-->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<div include-html="header.html"></div>
+<!--</Deject>-->
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '281006099368777');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=281006099368777&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '501779426954095');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=501779426954095&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1646580315469915');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1646580315469915&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39925013-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-39925013-3');
+</script>
+
+
+</head>
+
+
+
+
+<body>
+  <div id="app" class="main-container fix-header">
+    <header class="container-fluid pt-1 pb-1 bg-primary fixed-top shadow-sm ">
+      <div class="row align-items-center justify-content-center text-center text-md-left ">
+        <div class="col-auto text-center ">
+          <picture>
+            <source type="image/webp" srcset="img/apple-touch-icon-180x180.webp">
+            <source type="image/png" srcset="img/apple-touch-icon-180x180.png">
+            <img src="img/apple-touch-icon-180x180.png" alt="" class="logo img-fluid">
+          </picture>
+        </div>
+        <div class="col text-center text-md-right">
+          <button type="button" class="btn btn-secondary m-0 d-none d-sm-inline popup" data-mfp-src="#popup" data-btn="tr4" data-effect="mfp-zoom-in">Забронировать по выгодной цене</button>
+        </div>
+        <div class="col-auto">
+          <nav class="navbar navbar-dark bd-navbar p-0">
+            <ul class="navbar-nav">
+              <li class=""><a class="nav-link py-0" href="tel:+380931701574"><i class="fa fa-phone" aria-hidden="true"></i> +38 (093) <b>170 15 74</b> UA</a> </li>
+              <li class=""><a class="nav-link py-0" href="tel:+74996774862"><i class="fa fa-phone" aria-hidden="true"></i> +7 (499) <b>677 48 62</b> RU</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="s11 bg-secondary" style="background-image: url('img/s1_day.jpg');">
+      <div class="container">
+        <div class="row h-full align-items-center justify-content-md-end justify-content-center">
+          <div class="col-12 col-lg-7 col-xl-6">
+            <p>Единственный Практический Семинар по Очищению и Обновлению Души и Тела</p>
+              
+            <div class="h1 text-primary upp mb-1 mb-md-4">
+              <b class="text-shadow">День-Очищения</b>
+              <br>
+              <p class="small text-primary border-bottom border-primary pb-3">
+                <small>Пасха - Это Повод Стать Лучше, Очень Важно Быть в Равновесии</small>
+              </p>
+            </div>
+            <div class="">
+            <p class="upp lead bold">за 2 занятия мы: </p>
+            
+              <ul class="list-unstyled pl-3">
+                <li><p class="bold mb-1">• Очистим Первый Жизненный Центр</p></li>
+                <li><p class="bold mb-1">• Укрепим Связи с Близкими Людьми</p></li>
+                <li><p class="bold mb-1">• Укрепим Связи в Бизнесе с Клиентами и Партнёрами</p></li>
+                <li><p class="bold mb-1">• Отменим Карму у Кого Она Включена</p></li>
+                <li><p class="bold mb-1">• Активируем Родовую Энергию и Жизненные Силы</p></li>
+              </ul>
+            
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 col-xl-4">
+<div class="card bg-primary bg-white">
+  <div class="card-body">
+    <h4 class="text-center text-primary upp"><small>Приобрести на Лучших Условиях за <s class="text-muted"><b>300</b></s> <b>149</b> USD</small></h4>
+    <hr>
+    <form action="javascript:void(null);" method="post">
+      <div class="error-message"></div>
+      <div class="cssload-loader">
+        <div class="cssload-inner cssload-one"></div>
+        <div class="cssload-inner cssload-two"></div>
+        <div class="cssload-inner cssload-three"></div>
+      </div>
+      <fieldset class="fields">
+        <div class="form-group">
+          <label class="d-block"  for="f_name">Ваше имя</label>
+          <input type="text" name="name" class="form-control" id="f_name" placeholder="">
+        </div>
+        <div class="form-group">
+          <label class="d-block"  for="f_email">Ваш email</label>
+          <input type="email" name="email" class="form-control" id="f_email" placeholder="">
+        </div>
+        <div class="form-group">
+          <label class="d-block" for="f_phone">Ваш номер телефона</label>
+          <input type="tel" class="form-control" id="f_phone" name="phone">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Забронировать</button>
+        </div>
+        <input type="hidden" name="lh" value="https://shurina.ru/tr2019/lp/fondy/490.php">
+        <input type="hidden" name="gr_ct" value="nhxZQ">
+        <input type="hidden" name="l_st" value="25654048">
+        <input type="hidden" name="l_btn" value="unc">
+        <input type="hidden" name="l_name" value="Заявка ЛП">
+        <input type="hidden" name="l_pr" value="490">
+      </fieldset>
+    </form>
+    <p class="small text-center">Мы никогда не передадим вашы персональные данные кому-либо еще.</p>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="border-top pt-4 bg-white">
+      @@include('footer.html')
+      <!--<Deject>-->
+      <div include-html="footer.html"></div>
+      <!--</Deject>-->
+    </footer>
+  </div>
+
+<div id="popup" class="mfp-hide container form-popup mfp-with-anim">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-12">
+      <div class="card bg-primary bg-white">
+        <div class="card-body">
+          <h4 class="text-center text-primary upp">Приобрести <small>на Лучших Условиях за <s class="text-muted"><b>300</b></s> <b>149</b> USD</small></h4>
+          <hr>
+          <form action="javascript:void(null);" method="post">
+            <div class="error-message"></div>
+            <div class="cssload-loader">
+              <div class="cssload-inner cssload-one"></div>
+              <div class="cssload-inner cssload-two"></div>
+              <div class="cssload-inner cssload-three"></div>
+            </div>
+            <fieldset class="fields">
+              <div class="form-group">
+                <label class="d-block"  for="f_name">Ваше имя</label>
+                <input type="text" name="name" class="form-control" id="f_name" placeholder="">
+              </div>
+              <div class="form-group">
+                <label class="d-block"  for="f_email">Ваш email</label>
+                <input type="email" name="email" class="form-control" id="f_email" placeholder="">
+              </div>
+              <div class="form-group">
+                <label class="d-block" for="f_phone">Ваш номер телефона</label>
+                <input type="tel" class="form-control" id="f_phone" name="phone">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Приобрести на Лучших Условиях</button>
+              </div>
+              <input type="hidden" name="lh" value="https://shurina.ru/tr2019/lp/fondy/490.php">
+              <input type="hidden" name="gr_ct" value="nhxZQ">
+              <input type="hidden" name="l_st" value="25654048">
+              <input type="hidden" name="l_btn" value="unc">
+              <input type="hidden" name="l_name" value="Заявка ЛП">
+              <input type="hidden" name="l_pr" value="490">
+            </fieldset>
+          </form>
+          <p class="small text-center">Мы никогда не передадим вашы персональные данные кому-либо еще.</p>
+        </div>
+      </div>
+    </div>            
+  </div>
+</div>
+
+<div id="popup2" class="mfp-hide container form-popup mfp-with-anim">
+      <div class="row align-items-center justify-content-center">
+          <div class="col-12">
+            <div class="card bg-primary bg-primary-gradient">
+                <div class="card-body">
+
+ <h4 class="text-center text-primary upp">СТАТЬ УЧАСНИКОМ</h4>
+ <hr>
+            <form action="javascript:void(null);" method="post">
+              <div class="error-message"></div>
+              <div class="cssload-loader">
+                <div class="cssload-inner cssload-one"></div>
+                <div class="cssload-inner cssload-two"></div>
+                <div class="cssload-inner cssload-three"></div>
+              </div>
+            <fieldset class="fields">
+                  
+                  <div class="form-group">
+                    <label class="text-center d-block"  for="f_name">Ваше имя</label>
+                    <input type="text" name="name" class="form-control form-control-lg" id="f_name" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="text-center d-block"  for="f_email">Ваш email</label>
+                    <input type="email" name="email" class="form-control form-control-lg" id="f_email" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label class="text-center d-block" for="f_phone">Ваш номер телефона</label>
+                    <input type="tel" class="form-control form-control-lg" id="f_phone" name="phone">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Забронировать</button>
+                  </div>
+
+                  <input type="hidden" name="lh" value="https://shurina.ru/tr2019/lp/fondy/490.php">
+                  <input type="hidden" name="gr_ct" value="nhxZQ">
+                  <input type="hidden" name="l_st" value="25654048">
+                  <input type="hidden" name="l_btn" value="unc">
+                  <input type="hidden" name="l_name" value="Заявка ЛП">
+                  <input type="hidden" name="l_pr" value="490">
+
+                </fieldset>              
+            </form>
+            <p class="small text-center">Мы никогда не передадим вашы персональные данные кому-либо еще.</p>
+            </div>
+
+                </div>
+              </div>
+
+
+             
+          </div>
+</div>
+
+
+  <link rel="stylesheet" href="css/main2.min.css">
+	<script src="js/scripts.min.js"></script>
+  <script src="js/sender.js" async defer></script>
+  
+  <!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'tyUfUkx04N';var d=document;var w=window;function l(){
+  var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+  s.src = '//code.jivosite.com/script/widget/'+widget_id
+    ; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
+  if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
+  else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+</body>
+</html>

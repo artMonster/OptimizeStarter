@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+@@include('header.html')
+
+<!--<Deject>-->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<div include-html="header.html"></div>
+<!--</Deject>-->
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '281006099368777');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=281006099368777&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '501779426954095');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=501779426954095&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1646580315469915');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1646580315469915&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39925013-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-39925013-3');
+</script>
+
+
+</head>
+
+
+
+
+<body>
+	<!-- MAIN CONT -->
+  <div id="app" class="main-container fix-header">
+
+    <!-- HEADER -->
+		
+    <header class="container-fluid pt-1 pb-1 bg-primary fixed-top shadow-sm ">
+            <!-- Navbar
+      ================================================== -->
+
+        <div class="row align-items-center justify-content-center text-center text-md-left ">
+          
+         
+          
+         
+          <div class="col-auto text-center ">
+             <picture>
+                <source type="image/webp" srcset="img/apple-touch-icon-180x180.webp">
+                <source type="image/png" srcset="img/apple-touch-icon-180x180.png">
+                <img src="img/apple-touch-icon-180x180.png" alt="" class="logo img-fluid">
+            </picture>
+          </div>
+          <div class="col text-center">
+          
+            <button class="btn btn-secondary m-0 d-none d-sm-inline" data-href="#paks">Забронировать по выгодной цене</button>
+          </div>
+          <div class="col-auto">
+            <nav class="navbar navbar-dark bd-navbar p-0">
+              <ul class="navbar-nav">
+                <li class=""><a class="nav-link small py-0" href="tel:+380931701574"><i class="fa fa-phone" aria-hidden="true"></i> +38 (093) <b>170 15 74</b> UA</a> </li>
+                <li class=""><a class="nav-link small py-0" href="tel:+74996774862"><i class="fa fa-phone" aria-hidden="true"></i> +7 (499) <b>677 48 62</b> RU</a></li>
+              </ul>
+            </nav>
+            </div>
+         </div>
+    </header>
+    
+    <!-- / HEADER / -->
+		
+
+<section class="s1 bg-secondary" style="background-image: url('img/s1.jpg');">
+  <div class="container">
+    <div class="row align-items-center justify-content-md-end justify-content-center">
+      <div class="col-12 col-md-8">
+        <p>Первая в своем роде программа глубинной трансформации сознания</p>
+          
+        <div class="h1 text-primary upp mb-4">
+          <b class="text-shadow">ИСЦЕЛЕНИЕ</b>
+          <small>КЛЮЧЕВЫХ СФЕР </small>
+          <b class="text-shadow">ЖИЗНИ: </b>
+          <br>
+          <p class="small text-primary border-bottom border-primary pb-3">
+            <small>деньги, любовь, здоровье, социальный успех</small>
+          </p>
+        </div>        
+        <p>Эти практики Виктория Шурина использует в индивидуальной работе со звездами, бизнесменами и самыми успешными людьми СНГ, чтобы помочь им легко и очень быстро достигать желаемого</p>
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <a class="mb-2 btn btn-outline-primary btn-xxl popup-youtube" href="https://www.youtube.com/watch?v=OE9CAvF3FSk" role="button"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+          </div>
+          <div class="col">
+            <a class="mb-2 btn btn-primary btn-lg" href="#" data-href="#paks" role="button">Записаться сейчас</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <section class="s4">
+  <div class="container">
+    <div class="row align-items-start justify-content-center">
+      <div class="col-md-10 text-center">
+        <p class="h1">Всегда ли вы чувствуете, что получаете в жизни то, что хотите?</p>
+      </div>
+      <div class="col-md-5 text-center order-1" style="background-position: 50% 50%; background-repeat: no-repeat; background-image: url('img/b1.webp'); -webkit-background-size: contain;
+        background-size: contain;">
+        <div class="m-5">
+            <picture>
+              <source type="image/webp" data-srcset="img/p1.webp">
+              <source type="image/jpeg" data-srcset="img/p1.jpg">
+              <img data-src="img/p1.jpg" alt="" class="rounded-circle img-fluid lazyload">
+            </picture>
+        </div>
+      </div>
+      <div class="col-md-7 order-2">
+        <blockquote class="blockquote mt-5">
+          <p class="h4 norm mb-4 text-primary">Возможно, вы не бедный человек</p>
+          <p class="blockquote-footer">Но все еще далеки от финансовой свободы, вам не удается достаточно быстро достигать денежных целей и вы все еще слишком часто беспокоитесь о деньгах для комфортной жизни</p>
+        </blockquote>
+      </div>
+      <div class="col-md-7 order-4 order-md-3">
+        <blockquote class="blockquote mt-5">
+          <p class="h4 norm mb-4 text-primary">Или, возможно, вы вполне здоровы</p>
+          <p class="blockquote-footer">Но все равно ощущаете усталость, боль, боретесь с лишним весом или пытаетесь сохранить молодость.</p>
+        </blockquote>
+      </div>
+      <div class="col-md-5 text-center order-3 order-md-4" style="background-position: 50% 50%;background-repeat: no-repeat; background-image: url('img/b1.webp'); -webkit-background-size: contain;
+        background-size: contain;">
+         <div class="m-5">
+        <picture>
+              <source type="image/webp" data-srcset="img/p2.webp">
+              <source type="image/jpeg" data-srcset="img/p2.jpg">
+              <img data-src="img/p2.jpg" alt="" class="rounded-circle img-fluid lazyload">
+            </picture>
+      </div>
+      </div>
+      <div class="col-md-5 text-center order-5" style="background-position: 50% 50%;background-repeat: no-repeat; background-image: url('img/b1.webp'); -webkit-background-size: contain;
+        background-size: contain;">
+         <div class="m-5">
+        <picture>
+              <source type="image/webp" data-srcset="img/p3.webp">
+              <source type="image/jpeg" data-srcset="img/p3.jpg">
+              <img data-src="img/p3.jpg" alt="" class="rounded-circle img-fluid lazyload">
+            </picture>
+      </div>
+      </div>
+      <div class="col-md-7 order-6">
+        <blockquote class="blockquote mt-5">
+          <p class="h4 norm mb-4 text-primary">Или вы окружены людьми, которых любите/которые любят вас</p>
+          <p class="blockquote-footer">Но продолжаете терпеть непонятные отношения или просто хотите наконец-то разобраться с конфликтом, который затянулся.</p>
+        </blockquote>
+      </div>
+      <div class="col-md-7 order-8 order-md-7">
+        <blockquote class="blockquote mt-5">
+          <p class="h4 norm mb-4 text-primary">Возможно, вы не ищите славы и публичности</p>
+          <p class="blockquote-footer">Но вам не хватает признания, ощущения того, что то, что вы делаете, важно и ценно для других.</p>
+        </blockquote>
+      </div>
+      <div class="col-md-5 text-center order-7 order-md-8" style="background-position: 50% 50%;background-repeat: no-repeat; background-image: url('img/b1.webp'); -webkit-background-size: contain;
+        background-size: contain;">
+        <div class="m-5">
+          <picture>
+            <source type="image/webp" data-srcset="img/p4.webp">
+            <source type="image/jpeg" data-srcset="img/p4.jpg">
+            <img data-src="img/p4.jpg" alt="" class="rounded-circle img-fluid lazyload">
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-start justify-content-center">
+      <div class="col-lg-8 text-center">
+        <p class="lead text-primary">Если хоть что-то из списка выше вам откликается, вероятно вы задавали себе вопрос:</p>
+        <p class="display-4 display-sm-2 text-secondary">– Что же мне мешает?</p>
+      </div>
+      <div class="col-md-10 text-center">
+        <p class="lead strong"><span class="h4 strong">Причина</span>, почему вы до сих пор не достигли желаемого успеха не в том, что вы плохо стараетесь или вам не везет. <span class="h4 strong">Совсем нет.</span></p>
+      </div>
+      <div class="col-md-5">
+        <p class="text-muted">Просто ваш мозг запрограммирован обществом (СМИ, учителями, родителями) на то, чтобы удерживать вас в зоне комфорта, где нету истинного изобилия, удовольствия и безусловного счастья. </p>
+      </div>
+      <div class="col-md-5">
+        <p class="text-muted">Обойти все эти блоки очень непросто. Иначе бы любой человек, который прочитал книгу по личностному росту, смог легко себя исцелить и жить жизнью своей мечты.</p>
+      </div>
+      <div class="col-md-10 text-center">
+        <div class="card mt-4 mb-4 p-2 shadow-sm">
+          <div class="card-body">
+            <p class="lead mb-4 norm">Но благодаря инновационным достижениям в передовой психологии и квантовой физике, вы избавитесь от своих блокирующих убеждений раз и навсегда</p>
+            <button type="button" class="btn btn-lg btn-primary popup" data-mfp-src="#popup" data-btn="tr3" data-effect="mfp-zoom-in">Избавиться от блоков</button>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="s2 jumbotron bg-secondary" style="background-repeat: no-repeat; background-image: url('img/s2.webp'); -webkit-background-size: cover;
+        background-size: cover;">
+    <div class="container">
+        <div class="row align-items-start justify-content-center">
+          <div class="col-lg-12 text-center mb-4">
+           <p class="h1">В результате трансформации, вы… <br><small class="text-muted lead">Создайте ваши изобилие и успех в деньгах, любви, здоровье и социуме</small></p>
+           
+         </div>
+         
+         </div>
+         <div class="row align-items-start justify-content-end">
+<div class="col-lg-9 mb-4">
+<ul class="list-unstyled">
+  <li class="media">
+   <p class="h3 pr-4 pt-1 text-primary"><i class="fa fa-check" aria-hidden="true"></i></p>
+    <div class="media-body">
+      <p class="mt-0 mb-4 h4 norm text-primary"> Создадите изобилие богатства:</p>
+      <ul>
+        <li>
+          <p>Избавитесь от негативных финансовых установок, которые тормозят достижение ваших денежных целей. Например, “трачу больше, чем получаю”, импульсивные покупки, долги.</p>
+        </li>
+        <li>
+          <p>Определите моменты, которые не позволяют вам выходить на новые финансовые уровни в бизнесе/работе. Начнете видеть возможности вокруг вас, которые раньше не замечали.</p>
+        </li>
+        <li><p>Освободитесь от негативных эмоций, связанных с деньгами. Таких как вина, стресс, волнения и подавляющее чувство нехватки.</p></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div>
+<div class="col-lg-8 mb-4">
+<ul class="list-unstyled">
+  <li class="media">
+    <p class="h3 pr-4 pt-1 text-primary"><i class="fa fa-check" aria-hidden="true"></i></p>
+    <div class="media-body">
+      <p class="mt-0 mb-4 h4 norm text-primary"> Создадите изобилие любви:</p>
+        <ul>
+          <li><p>Вернете огонь в ваши отношения или обретете ясность, чтобы создать новый союз.</p></li>
+          <li><p>Улучшите коммуникацию с людьми, которые важны для вас ― детьми, родителями, друзьями, коллегами.</p></li>
+          <li><p>Разрешите болезненные конфликты с близкими, даже если они длятся годами.</p></li>
+        </ul>
+    </div>
+  </li>
+</ul>
+</div>
+<div class="col-lg-7 mb-4">
+<ul class="list-unstyled">
+  <li class="media">
+    <p class="h3 pr-4 pt-1 text-primary"><i class="fa fa-check" aria-hidden="true"></i></p>
+    <div class="media-body">
+      <p class="mt-0 mb-4 h4 norm text-primary"> Создадите изобилие здоровья:</p>
+        <ul>
+          <li><p>Полностью измените отношение к своим состояниям и телу, чтобы с удовольствием тренироваться и питаться более здоровой пищей.</p></li>
+          <li><p>Наполнитесь энергией молодости, развернете время вспять, усилите вашу продуктивность и страсть к жизни.</p></li>
+          <li><p>Облегчите симптомы хронических заболеваний и ускорите ваш путь к полному исцелению ума, тела и души.</p></li>
+        </ul>
+    </div>
+  </li>
+</ul>
+</div>
+<div class="col-lg-8 mb-4">
+<ul class="list-unstyled">
+  <li class="media">
+   <p class="h3 pr-4 pt-1 text-primary"><i class="fa fa-check" aria-hidden="true"></i></p>
+    <div class="media-body">
+      <p class="h4 mt-0 mb-4 norm text-primary">Создадите изобилие социального успеха:</p>
+        <ul>
+<li><p>Поймете, чем максимально можете быть полезны миру и какая деятельность принесёт достойное вознаграждение вам и вашей семье.</p></li>
+<li><p>Раскроете в себе неисчерпаемый источник энергии, которая буквально притягивает к вам людей.</p></li>
+<li><p>Наполнитесь чувством благодарности, признания и полной самореализации.</p></li>
+        </ul>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="s2">
+    <div class="container">
+
+        <div class="row align-items-start justify-content-center">
+          <div class="col-lg-12 text-center mb-4">
+           <p class="h1">Как это произойдет</p>
+         </div>
+
+         <div class="col text-center">
+          <p class="display-3 m-4 text-secondary">Шаг 1</p>
+           <p class="norm"><b>Определите истинную причину</b></p>
+           <p>Во время занятий Виктория помогает выявить, что же на самом деле мешают вашему успеху. Часто, это совсем не то, что вы думали.</p>
+         </div>
+
+         <div class="col text-center">
+          <p class="display-3 m-4 text-secondary">Шаг 2</p>
+          <p class="norm"><b>Выгрузите блоки</b></p>
+          <p>Затем эти убеждения поэтапно и очень бережно удаляются из вашего подсознания. А их место занимают здоровые мыслеформы.</p>
+         </div>
+
+         <div class="col text-center">
+          <p class="display-3 m-4 text-secondary">Шаг 3</p>
+           <p class="norm"><b>Исцелите сферы жизни</b></p>
+           <p>Ваше мышление начинает работать в положительном ключе, и вы в максимально быстрые сроки достигаете того, о чем так долго мечтали.</p>
+         </div>
+<div class="col-12 mt-4 text-center">
+  <button type="button" class="btn btn-lg btn-primary" data-href="#paks">Записаться сейчас</button>
+</div>
+       </div>
+     </div>
+   </section>
+   <section class="s2 jumbotron bg-secondary">
+    <div class="container">
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-12 text-center mb-4">
+           <p class="h1">Ваш проводник к успеху</p>
+         </div>
+         <div class="col-md-8">
+<ul class="list-unstyled">
+  <li class="media">
+    <div class="media-body">
+      <p class="mt-0 mb-4 h3 norm">Виктория Шурина</p>
+      <ul>
+<li><p>Создатель, идейный вдохновитель и президент международной компании целителей “LBG”</p></li>
+<li><p>Создатель Журнала LBG</p></li>
+<li><p>Писательница, тренер, автор семинаров и аудиопрограмм по темам дистанционного целительства, самореализации, идерства и других</p></li>
+<li><p>Ежегодно консультирует 100 фирм и тренеров, а также проводит семинары для аудиторий 1000+ участников</p></li>
+<li><p>Признана одним из лучших специалистов по развитию личности и построению дистанционного бизнеса</p></li>
+<li><p>Успешная бизнес-леди и счастливая женщина</p></li>
+
+      </ul>
+    </div>
+  </li>
+</ul>
+<p class="h5" hidden>О Виктории говорят и пишут:</p>
+         </div>
+       
+       <div class="col-md-4 text-center">
+         <picture>
+              <source type="image/webp" data-srcset="img/pic2.webp" srcset="img/pic2.webp">
+              <source type="image/jpeg" data-srcset="img/pic2.jpg" srcset="img/pic2.jpg">
+              <img data-src="img/pic2.jpg" alt="" class="rounded-circle img-fluid lazyload " src="img/pic2.jpg">
+            </picture>
+       </div>
+       </div>
+     </div>
+   </section>
+     <section class="s2 bg-primary">
+    <div class="container">
+
+        <div class="row align-items-start justify-content-center">
+          <div class="col-lg-10 text-center">
+           <p class="lead text-white">Эффективность практик и обучающих программ “LBG” проверены тысячами учеников и целителей. Люди кардинально меняют свою жизнь к лучшему даже благодаря всего нескольким занятиям и инсайтам
+</p>
+         </div>
+       </div>
+     </div>
+   </section>
+   <section class="s2">
+    <div class="container">
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-12 text-center">
+          <p class="h1">5 причин для трансформаций</p>
+        </div>
+        <div class="col-sm-4 order-1">
+          <p class="display-1 text-center mt-5 mb-5 text-secondary">1</p>
+        </div>
+        <div class="col-sm-7 order-2">
+          <p class="h4 mt-4 norm text-primary">Сегодня это необходимость</p>
+          <p> – Мир постоянно движется вперед, и если застрять в каком-то из блоков, ситуация будет только усугубляться и решить ее в дальнейшем будет сложнее.</p>
+        </div>
+        <div class="col-sm-7 order-4 order-md-3">
+          <p class="h4 mt-4 norm text-primary">Глобальное обновление</p>
+          <p> – Чтобы не поддаваться влиянию масс и успевать за всемирным прогрессом, нужно постоянно работать над собой: чистить и обновлять программы подсознания. Минимум 1 раз в полгода.</p>
+        </div>
+        <div class="col-sm-4 order-3 order-md-4">
+          <p class="display-1 text-center mt-5 mb-5 text-secondary">2</p>
+        </div>
+        <div class="col-sm-4 order-5">
+          <p class="display-1 text-center mt-5 mb-5 text-secondary">3</p>
+        </div>
+        <div class="col-sm-7 order-6">
+          <p class="h4 mt-4 norm text-primary">Мощные программы</p>
+          <p> – Мир постоянно движется вперед, и если застрять в каком-то из блоков, ситуация будет только усугубляться и решить ее в дальнейшем будет сложнее.</p>
+        </div>
+        <div class="col-sm-7 order-8 order-md-7">
+          <p class="h4 mt-4 norm text-primary">Сильный наставник</p>
+          <p> – Чтобы не поддаваться влиянию масс и успевать за всемирным прогрессом, нужно постоянно работать над собой: чистить и обновлять программы подсознания. Минимум 1 раз в полгода.</p>
+        </div>
+        <div class="col-sm-4 order-7 order-md-8">
+          <p class="display-1 text-center mt-5 mb-5 text-secondary">4</p>
+        </div>
+        <div class="col-sm-4 order-9">
+          <p class="display-1 text-center mt-5 mb-5 text-secondary">5</p>
+        </div>
+        <div class="col-sm-7 order-10">
+          <p class="h4 mt-4 norm text-primary">Новое мироощущение</p>
+          <p> – Вы посмотрите на мир совершенно другими глазами и увидите новые возможности, о которых даже не подозревали. Это откроет поток счастья и изобилия, который достоин вас.</p>
+        </div>
+        <div class="col-12 mt-5 order-11 text-center">
+          <button type="button" class="btn btn-lg btn-primary" data-href="#paks">Пройти трансформации</button>
+        </div>
+       </div>
+     </div>
+   </section>
+<section class="s2 jumbotron bg-secondary">
+  <div class="container">
+    <div class="row align-items-start justify-content-center">
+      <div class="col-lg-12 text-center mb-4">
+        <p class="h1">Программа трансформаций<br>
+          <small class="lead text-muted">Создайте ваши изобилие и успех в деньгах, любви, здоровье и социуме</small>
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4 text-center">
+          <picture>
+            <source type="image/webp" data-srcset="img/rune_bird.webp">
+            <source type="image/png" data-srcset="img/rune_bird.png">
+            <img data-src="img/rune_bird.png" alt="" class="img-fluid lazyload">
+          </picture>
+        </div>
+        <p class="text-muted">Неделя I</p>
+        <p class="h2 text-primary">Деньги</p>
+        <p class="lead"><i class="fa fa-cubes" aria-hidden="true"></i> 3 занятия</p>
+        <div class="text-left mt-5 mb-4 pl-2 pr-2">
+          <ul class="list-unstyled">
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Вы научитесь видеть ранее неизвестные источники финансов.</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Найдете решение, как пробить стеклянный потолок в прибыли и обеспечите себя стабильно высоким доходом.</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Деньги всегда придут к вам, когда это нужно, и самым неожиданным способом.</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body">
+                <p>Вы загрузите в подсознание мощные программы сохранения и приумножения материального богатства, которые обеспечат вам и семье счастливое будущее.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.col-lg-6 -->
+      <div class="col-lg-6">
+        <div class="mb-4 text-center">
+          <picture>
+            <source type="image/webp" data-srcset="img/rune_web.webp">
+            <source type="image/png" data-srcset="img/rune_web.png">
+            <img data-src="img/rune_web.png" alt="" class="img-fluid lazyload">
+          </picture>
+        </div>
+        <p class="text-muted">Неделя II</p>
+        <p class="h2 text-primary">Любви</p>
+        <p class="lead"><i class="fa fa-cubes" aria-hidden="true"></i> 3 занятия</p>
+        <div class="text-left mt-5 mb-4 pl-2 pr-2">
+          <ul class="list-unstyled">
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Вы совершите скачок в формировании отношений с важными для вас людьми</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Вернете себе состояние любви и сопереживания, наполнитесь энергией заботы</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Исцелитесь от затяжного конфликта и своей любовью исцелите близких людей</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body">
+                <p>Выйдете на совершенно новый уровень взаимоотношений</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.col-lg-6 -->
+      <div class="col-lg-6">
+        <div class="mb-4 text-center">
+          <picture>
+            <source type="image/webp" data-srcset="img/rune_web.webp">
+            <source type="image/png" data-srcset="img/rune_web.png">
+            <img data-src="img/rune_web.png" alt="" class="img-fluid lazyload">
+          </picture>
+        </div>
+        <p class="text-muted">Неделя III</p>
+        <p class="h2 text-primary">Здоровья</p>
+        <p class="lead"><i class="fa fa-cubes" aria-hidden="true"></i> 3 занятия</p>
+        <div class="text-left mt-5 mb-4 pl-2 pr-2">
+          <ul class="list-unstyled">
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Вы создадите постоянно хорошее самочувствие и активируете целительные ресурсы вашего тела.</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Моментально избавитесь от вредных эмоций, энергии и других негативных факторов.</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body">
+                <p>Благодаря правильным программа подсознания вы улучшите ваш внешний вид, позаботитесь о своем подтянутом теле и хорошем самочувствиии.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.col-lg-6 -->
+      <div class="col-lg-6">
+        <div class="mb-4 text-center">
+          <picture>
+            <source type="image/webp" data-srcset="img/rune_bluet.webp">
+            <source type="image/png" data-srcset="img/rune_bluet.png">
+            <img data-src="img/rune_bluet.png" alt="" class="img-fluid lazyload">
+          </picture>
+        </div>
+        <p class="text-muted">Неделя IV</p>
+        <p class="h2 text-primary">Социальныого успеха</p>
+        <p class="lead"><i class="fa fa-cubes" aria-hidden="true"></i> 3 занятия</p>
+        <div class="text-left mt-5 mb-4 pl-2 pr-2">
+          <ul class="list-unstyled">
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>У вас раскроется видение своего потенциала ― вы поймете, чем максимально можете быть полезны миру и какая деятельность принесёт достойное вознаграждение вам и вашей семье.</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body border-bottom border-primary">
+                <p>Вы усилите интуицию и сможете быстро на уровне чувств принимать наиболее правильные решения, которые гарантировано будут успешными (даже если логика подсказывает другое).</p>
+              </div>
+            </li>
+            <li class="media mb-3">
+              <p class="h3 pr-4 pt-1 text-secondary"><i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="media-body">
+                <p>Обретете свободу, избавитесь от навязчивых негативных установок и распахнете дверь всей глубины и масштабности вашей личности для себя и мира.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.col-lg-6 -->
+      <div class="col-12 text-center">
+          <button type="button" class="btn btn-lg btn-primary" data-href="#paks">Пройти трансформацию</button>
+        </div>
+</div>
+</div>
+ </section>
+
+<section class="s3" id="paks">
+    <div class="container">
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-sm-10 text-center">
+           
+            <small class="text-muted lead">Исцеление ключевых сфер жизни с Викторией Шуриной ― </small> 
+            <p class="h1 text-primary"><span class="">это не обучающий курс, а реальная практика в прямом эфире </span></p>
+  <p class="text-muted">Вы просто приходите на занятия, закрываете глаза и в спокойном состоянии загружаете в подсознание новые программы, направленные на успех.</p>
+  <p class="h4 mb-4 mt-5 text-primary">Выберите, какую трансформацию вы хотите совершить</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card m-2 shadow-sm">
+      <div class="card-header">
+        <p class="h4 my-0 font-weight-normal text-primary"><small class="text-muted">Трансформация</small><br>Денег</p>
+      </div>
+      <div class="card-body">
+       <ul class="list-unstyled mt-4 mb-4">
+          <li><i class="fa fa-cubes" aria-hidden="true"></i> 3 отдельных занятия</li>
+        </ul>
+        <span class="text-muted">Стоимость</span>
+        <p class="display-4 card-title pricing-card-title">$250</p>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary popup" data-mfp-src="#popup" data-btn="tr1" data-effect="mfp-zoom-in">Выбрать</button>
+      </div>
+    </div>
+    <div class="card m-2 shadow-sm">
+      <div class="card-header">
+        <p class="h4 my-0 font-weight-normal  text-primary"><small class="text-muted">Трансформация</small><br>Любви</p>
+      </div>
+      <div class="card-body">
+       <ul class="list-unstyled mt-4 mb-4">
+          <li><i class="fa fa-cubes" aria-hidden="true"></i> 3 отдельных занятия</li>
+        </ul>
+        <span class="text-muted">Стоимость</span>
+        <p class="display-4 card-title pricing-card-title">$250</p>
+       <button type="button" class="btn btn-lg btn-block btn-outline-primary popup" data-mfp-src="#popup" data-btn="tr2" data-effect="mfp-zoom-in">Выбрать</button>
+      </div>
+    </div>
+  </div>
+  <div class="card-deck mb-3 text-center">
+    <div class="card m-2 shadow-sm">
+      <div class="card-header">
+        <p class="h4 my-0 font-weight-normal text-primary"><small class="text-muted">Трансформация</small><br>Здоровья</p>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-4 mb-4">
+          <li><i class="fa fa-cubes" aria-hidden="true"></i> 3 отдельных занятия</li>
+        </ul>
+        <span class="text-muted">Стоимость</span>
+        <p class="display-4 card-title pricing-card-title">$250</p>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary popup" data-mfp-src="#popup" data-btn="tr3" data-effect="mfp-zoom-in">Выбрать</button>
+      </div>
+    </div>
+    <div class="card m-2 shadow-sm">
+      <div class="card-header">
+        <p class="h4 my-0 font-weight-normal  text-primary"><small class="text-muted">Трансформация</small><br>Соцуспех</p>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-4 mb-4">
+          <li><i class="fa fa-cubes" aria-hidden="true"></i> 3 отдельных занятия</li>
+        </ul>
+        <span class="text-muted">Стоимость</span>
+        <p class="display-4 card-title pricing-card-title">$250</p>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary popup" data-mfp-src="#popup" data-btn="tr4" data-effect="mfp-zoom-in">Выбрать</button>
+      </div>
+    </div>
+  </div>
+  <div class="card-deck text-center">
+     <div class="card border-primary mb-4 shadow-sm">
+      <div class="card-header bg-primary">
+        <p class="display-5 my-0 font-weight-normal text-secondary">Все трансформации вместе</p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div>
+              <p class="lead border-bottom p-2">Трансформация <strong>Денег</strong></p>
+              <p><i class="fa fa-cubes" aria-hidden="true"></i> 3 отдельных занятия</p>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="border-bottom p-2 lead">Трансформация <strong>Любови</strong></p>
+              <p><i class="fa fa-cubes" aria-hidden="true"></i> 3 отдельных занятия</p>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="border-bottom p-2 lead lead">Трансформация <strong>Здоровья</strong></p>
+              <p><i class="fa fa-cubes" aria-hidden="true"></i> 3 отдельных занятия</p>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <p class="border-bottom p-2 lead lead">Трансформация <strong>Соцуспех</strong></p>
+              <p><i class="fa fa-cubes" aria-hidden="true"></i> 3 отдельных занятия</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4 align-items-center justify-content-center">
+          <div class="col-auto">
+            <div>
+              <span class="text-muted">Стоимость</span>
+              <p class="h2 card-title pricing-card-title text-secondary"><s>$1000</s></p>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div>
+              <span class="text-muted">Цена сейчас</span>
+              <p class="display-4 card-title pricing-card-title">$490</p>
+            </div>
+          </div>
+        </div>
+        
+        
+        <button type="button" class="btn btn-lg btn-primary popup" data-mfp-src="#popup2" data-btn="tr4" data-effect="mfp-zoom-in">Выбрать по выгодной цене</button>
+        <p class="text-primary">* количество мест ограничено</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="s6 jumbotron bg-primary" style="background-image: url('img/s7.jpg');">
+   <div class="container">      
+      <div class="row justify-content-center">
+        <div class="col-sm-11">
+          <div class="text-center">
+            <p class="h1 text-secondary">Почему стоит действовать сейчас, чтобы 2019 год стал по-настоящему успешным</p>
+             <picture>
+              <source type="image/webp" data-srcset="img/pic3.webp" srcset="img/pic2.webp">
+              <source type="image/jpeg" data-srcset="img/pic3.jpg" srcset="img/pic2.jpg">
+              <img data-src="img/pic3.jpg" alt="" class="rounded-circle img-fluid lazyload " src="img/pic2.jpg">
+            </picture>
+
+            <p class="h4 text-white mb-4 mt-4"><em>«Все начинается с мысли: мысль порождает действие, а действие создает реальность»</em></p>
+          </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+            <p class="text-white">Хотите, чтобы в жизни все происходило словно по щелчку пальцев? После глубинной трансформации ваши мысли и действия буквально притягивают нужные ситуации и нужных людей. Все происходит самым лучшим образом, даже если вы не ожидаете этого.</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <p class="text-white">Как только вы найдете себя и начнете реализовывать свой потенциал, для вас откроется совершенно новый ВОЛШЕБНЫЙ мир. И чем раньше это произойдет, тем больше возможностей у вас будет!</p>
+          </div>
+        </div>
+            <p class="h2 text-secondary mt-5">Но что, если все останется, как прежде?</p>
+            <p class="text-secondary lead">Можно очень долго и нудно искать свой истинный путь и “чудесную кнопку”, которая якобы решит все проблемы. И спустя многие годы оглянуться и осознать, что жизнь прошла, а вы так и не достигли всего того, о чем так красочно мечтали.</p>
+          </div>
+        </div>
+      </div>
+</section>
+<section class="s7">
+  <div class="container">
+    <div class="row align-items-start justify-content-center">
+      <div class="col-lg-10 text-center">
+        <p class="display-5 text-primary">Ваше будущее формируется прямо сейчас установками, которые существуют в вашем подсознании. </p>
+
+        <p class="display-4 mb-4">Каким оно будет?</p>
+        <button type="button" class="btn btn-primary btn-lg" data-href="#paks">Хочу создать жизнь своей мечты</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<!-- / MAIN /  -->
+    
+    <!-- / HEADER / -->
+  
+		<footer class="border-top pt-4 bg-white">
+      @@include('footer.html')
+
+	  <!--<Deject>-->
+    <div include-html="footer.html"></div>
+    <!--</Deject>-->
+    
+		</footer>
+	
+  </div>
+
+  <div id="popup" class="mfp-hide container form-popup mfp-with-anim">
+      <div class="row align-items-center justify-content-center">
+          <div class="col-12">
+            <div class="card bg-primary bg-primary-gradient">
+                <div class="card-body">
+
+ <h4 class="text-center text-primary upp">СТАТЬ УЧАСНИКОМ</h4>
+ <hr>
+            <form action="javascript:void(null);" method="post">
+              <div class="error-message"></div>
+              <div class="cssload-loader">
+                <div class="cssload-inner cssload-one"></div>
+                <div class="cssload-inner cssload-two"></div>
+                <div class="cssload-inner cssload-three"></div>
+              </div>
+            <fieldset class="fields">
+                  
+                  <div class="form-group">
+                    <label class="text-center d-block"  for="f_name">Ваше имя</label>
+                    <input type="text" name="name" class="form-control form-control-lg" id="f_name" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="text-center d-block"  for="f_email">Ваш email</label>
+                    <input type="email" name="email" class="form-control form-control-lg" id="f_email" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label class="text-center d-block" for="f_phone">Ваш номер телефона</label>
+                    <input type="tel" class="form-control form-control-lg" id="f_phone" name="phone">
+                  </div>
+                  <div class="form-group">
+                    <br>
+                    <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Забронировать</button>
+                  </div>
+
+                  <input type="hidden" name="lh" value="https://shurina.ru/tr2019/lp/fondy/250.php">
+                  <input type="hidden" name="gr_ct" value="nhxZQ">
+                  <input type="hidden" name="l_st" value="25654048">
+                  <input type="hidden" name="l_btn" value="unc">
+                  <input type="hidden" name="l_name" value="Заявка ЛП">
+                  <input type="hidden" name="l_pr" value="250">
+
+                </fieldset>              
+            </form>
+            <p class="small text-center">Мы никогда не передадим вашы персональные данные кому-либо еще.</p>
+            </div>
+
+                </div>
+              </div>
+
+
+             
+          </div>
+</div>
+
+<div id="popup2" class="mfp-hide container form-popup mfp-with-anim">
+      <div class="row align-items-center justify-content-center">
+          <div class="col-12">
+            <div class="card bg-primary bg-primary-gradient">
+                <div class="card-body">
+
+ <h4 class="text-center text-primary upp">СТАТЬ УЧАСНИКОМ</h4>
+ <hr>
+            <form action="javascript:void(null);" method="post">
+              <div class="error-message"></div>
+              <div class="cssload-loader">
+                <div class="cssload-inner cssload-one"></div>
+                <div class="cssload-inner cssload-two"></div>
+                <div class="cssload-inner cssload-three"></div>
+              </div>
+            <fieldset class="fields">
+                  
+                  <div class="form-group">
+                    <label class="text-center d-block"  for="f_name">Ваше имя</label>
+                    <input type="text" name="name" class="form-control form-control-lg" id="f_name" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="text-center d-block"  for="f_email">Ваш email</label>
+                    <input type="email" name="email" class="form-control form-control-lg" id="f_email" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label class="text-center d-block" for="f_phone">Ваш номер телефона</label>
+                    <input type="tel" class="form-control form-control-lg" id="f_phone" name="phone">
+                  </div>
+                  <div class="form-group">
+                    <br>
+                    <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Забронировать</button>
+                  </div>
+
+                  <input type="hidden" name="lh" value="https://shurina.ru/tr2019/lp/fondy/490.php">
+                  <input type="hidden" name="gr_ct" value="nhxZQ">
+                  <input type="hidden" name="l_st" value="25654048">
+                  <input type="hidden" name="l_btn" value="unc">
+                  <input type="hidden" name="l_name" value="Заявка ЛП">
+                  <input type="hidden" name="l_pr" value="490">
+
+                </fieldset>              
+            </form>
+            <p class="small text-center">Мы никогда не передадим вашы персональные данные кому-либо еще.</p>
+            </div>
+
+                </div>
+              </div>
+
+
+             
+          </div>
+</div>
+
+
+  <link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js" async defer></script>
+  
+  <!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'tyUfUkx04N';var d=document;var w=window;function l(){
+  var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+  s.src = '//code.jivosite.com/script/widget/'+widget_id
+    ; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
+  if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
+  else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+</body>
+</html>

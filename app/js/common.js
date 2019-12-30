@@ -17,8 +17,33 @@ $(document).ready(function() {
 		mainClass: 'mfp-zoom',
 	});
 
+	$('.popup-youtube, .popup-gmaps').magnificPopup({
+		type: 'iframe',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: true,
+		midClick: true,
+		closeBtnInside: true,
+	});
 
-
+	$('.popup').magnificPopup({
+		type: 'inline',
+		fixedContentPos: false,
+		fixedBgPos: false,
+		overflowY: 'auto',
+		closeBtnInside: true,
+		preloader: true,
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'mfp-zoom-in',
+		callbacks: {
+			beforeOpen: function() {
+				this.st.mainClass = this.st.el.attr('data-effect');
+				$('[name=l_btn]').val(this.st.el.attr('data-btn'));
+			}
+		}
+	});
+/*
     var myPlayer;
     jQuery(function(){
 
@@ -26,7 +51,7 @@ $(document).ready(function() {
         $('#hypercomments_widget').css('height',$('.YTPOverlay').height());
 
     });
-
+*/
 
 });
 
